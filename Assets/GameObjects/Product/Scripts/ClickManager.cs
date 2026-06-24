@@ -8,7 +8,7 @@ public class ClickManager : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 10f;
 
-    private Vector2 startOffset = Vector2.zero;
+    private Rigidbody2D draggedRb = null;
     private GameObject draggedObject = null;
     private InputSystem_Actions inputActions;
 
@@ -33,8 +33,8 @@ public class ClickManager : MonoBehaviour
 
     private void ClickCanceled(InputAction.CallbackContext context)
     {
-        draggedObject = null; 
-        Debug.Log("Объект отпущен");
+        draggedObject = null;
+        draggedRb = null;
     }
 
 
@@ -50,19 +50,18 @@ public class ClickManager : MonoBehaviour
         {
             Debug.Log("Клик по: " + hit.name);
             draggedObject = hit.gameObject;
-            startOffset = (Vector2)draggedObject.transform.position - point;
+            draggedRb = hit.GetComponent<Rigidbody2D>();
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (draggedObject != null)
+        if (draggedRb != null)
         {
             Vector2 mousePos = inputActions.Gameplay.MovePoint.ReadValue<Vector2>();
-            Vector2 targetPosition = cam.ScreenToWorldPoint(mousePos); 
-            draggedObject.transform.position = targetPosition;         
+            Vector2 targetPosition = cam.ScreenToWorldPoint(mousePos);
+            draggedRb.MovePosition(targetPosition);
         }
     }
-
 
 }
