@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1567229251549085898}
   - component: {fileID: 5311620251290660490}
   - component: {fileID: 7388758289092524583}
+  - component: {fileID: 6025746951023937493}
   m_Layer: 6
   m_Name: Product
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0248, y: 0.0165, z: 0}
-  m_LocalScale: {x: 1.9417982, y: 1.8592155, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -179,3 +180,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6025746951023937493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924501543595218437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e7275ff26f5ba40b1a792578d1fe62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProductAnimator

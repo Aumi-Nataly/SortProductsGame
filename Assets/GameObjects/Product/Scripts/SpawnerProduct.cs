@@ -46,5 +46,8 @@ public class SpawnerProduct : MonoBehaviour
         productModel.OnProductToPool -= ReturnToPool;
 
         pool.ReturnToPool(product);
+        SeeProduct();
     }
+
+    
 }
