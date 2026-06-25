@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -5,25 +6,25 @@ using UnityEngine;
 public class SpawnerProduct : MonoBehaviour
 {
     [SerializeField]
-    private int PoolSize = 100;
+    private int PoolSize = 10;
 
     [SerializeField]
     private GameObject ProductPrefab;
 
 
     private Pool pool;
-    private ReaderJson reader;
+    private ReaderJson<ProductDataList> reader;
     private ProductDataList productDataList;
 
     private void Awake()
     {
         pool = new Pool(ProductPrefab, PoolSize);
-        reader = new ReaderJson();
+        reader = new ReaderJson<ProductDataList>("products.json");
     }
 
-    private void Start()
+    private async UniTaskVoid Start()
     {
-        productDataList = reader.ReaderJsonData();
+        productDataList = await reader.ReaderJsonDataAsync();
         SeeProduct();
     }
 
