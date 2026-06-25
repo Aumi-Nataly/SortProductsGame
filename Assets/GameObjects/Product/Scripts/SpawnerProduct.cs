@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnerProduct : MonoBehaviour
@@ -11,14 +12,18 @@ public class SpawnerProduct : MonoBehaviour
 
 
     private Pool pool;
+    private ReaderJson reader;
+    private ProductDataList productDataList;
 
     private void Awake()
     {
         pool = new Pool(ProductPrefab, PoolSize);
+        reader = new ReaderJson();
     }
 
     private void Start()
     {
+        productDataList = reader.ReaderJsonData();
         SeeProduct();
     }
 
@@ -30,15 +35,27 @@ public class SpawnerProduct : MonoBehaviour
         var product = pool.GetFromPool();
         product.transform.position = transform.position;
 
+        var prData = GetRandomProduct();
+
         var productModel = product.GetComponent<Product>();
-        productModel.SetTags(tags);
+        productModel.SetTags(prData.Tag);
         productModel.OnProductToPool += ReturnToPool;
 
 
         var spt = product.GetComponent<SpriteRenderer>();
-        spt.sprite = Resources.Load<Sprite>("Image/Products/icons8-мандарин-100");
+        spt.sprite = Resources.Load<Sprite>($"Image/Products/{prData.ImageName}");
 
     }
+
+    private ProductData GetRandomProduct()
+    {
+        int count = productDataList.Products.Count;
+        int randomNumber = UnityEngine.Random.Range(1, count + 1);
+
+        ProductData pr = productDataList.Products.Where(x => x.Id == randomNumber).FirstOrDefault();
+        return pr;
+    }
+
 
     private void ReturnToPool(GameObject product)
     {

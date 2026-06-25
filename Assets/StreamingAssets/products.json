@@ -1,0 +1,25 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "ImageName": "orange",
+      "Tag": [0, 2]
+    },
+    {
+      "Id": 2,
+      "ImageName": "cherry",
+      "Tag": [0, 1]
+    },
+    {
+      "Id": 3,
+      "ImageName": "banana",
+      "Tag": [0,2]
+    },
+    {
+      "Id": 4,
+      "ImageName": "pear",
+      "Tag": [0,2]
+    }
+
+  ]
+}

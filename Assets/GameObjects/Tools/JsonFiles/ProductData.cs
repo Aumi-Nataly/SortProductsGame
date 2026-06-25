@@ -1,6 +1,12 @@
 
+using System;
 using System.Collections.Generic;
 
+[Serializable]
+public class ProductDataList
+{
+    public List<ProductData> Products;
+}
 
 [System.Serializable]
 public class ProductData
@@ -13,6 +19,7 @@ public class ProductData
 [System.Serializable]
 public enum ProductType
 {
-   Fruit,
-   Red
+   Fruit, //0
+   Red, //1
+   Yellow //2
 }
