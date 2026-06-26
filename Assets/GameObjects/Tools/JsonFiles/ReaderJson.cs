@@ -2,6 +2,7 @@ using System.IO;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using System.Threading;
+using UnityEngine.Networking;
 
 public class ReaderJson <T> where T : class
 {  
@@ -43,7 +44,7 @@ public class ReaderJson <T> where T : class
             }
             else
             {
-                Debug.LogError($"Ошибка загрузки JSON: {request.error} | URL: {url}");
+                Debug.LogError($"Ошибка загрузки JSON: {request.error} | URL: {_savePath}");
                 return null;
             }
         }
