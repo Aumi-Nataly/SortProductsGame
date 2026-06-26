@@ -1,0 +1,29 @@
+{
+  "Categories": [
+    {
+      "Id": 1,
+      "ImageName": "berry",
+      "Tag": 3,
+      "LevelId": [ 1, 2 ]
+    },
+    {
+      "Id": 2,
+      "ImageName": "fruit",
+      "Tag": 0,
+      "LevelId": [ 1 ]
+    },
+    {
+      "Id": 3,
+      "ImageName": "red",
+      "Tag": 1,
+      "LevelId": [ 1, 2 ]
+    },
+    {
+      "Id": 4,
+      "ImageName": "yellow",
+      "Tag": 2,
+      "LevelId": [ 1, 2 ]
+    }
+
+  ]
+}

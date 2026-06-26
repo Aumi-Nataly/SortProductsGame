@@ -604,6 +604,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &728192059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8329193582487411398, guid: 72771f480031cf549b08067f0d6db1fd, type: 3}
+  m_PrefabInstance: {fileID: 8054924805722842781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &801075388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,6 +1199,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1644758650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8329193582487411398, guid: 72771f480031cf549b08067f0d6db1fd, type: 3}
+  m_PrefabInstance: {fileID: 419161315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956886944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2113633528}
+  - component: {fileID: 2113633529}
   m_Layer: 0
   m_Name: SpawnerCategory
   m_TagString: Untagged
@@ -1364,6 +1375,20 @@ Transform:
   - {fileID: 419161316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2113633529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113633527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7002b4edaeaaa194980fdb8a7bfd973b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerCategory
+  firstCategory: {fileID: 728192059}
+  secondCategory: {fileID: 1644758650}
 --- !u!1001 &5811333230004983452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1437,14 +1462,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2113633528}
     m_Modifications:
-    - target: {fileID: 3047551297995692647, guid: 72771f480031cf549b08067f0d6db1fd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047551297995692647, guid: 72771f480031cf549b08067f0d6db1fd, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4934497903054765806, guid: 72771f480031cf549b08067f0d6db1fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3752

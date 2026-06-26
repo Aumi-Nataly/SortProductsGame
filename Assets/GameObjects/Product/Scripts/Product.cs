@@ -13,6 +13,7 @@ public class Product : MonoBehaviour
         Tag = tags;
     }
 
+    public List<ProductType> GetTags() => Tag;
 
     public void DeleteProduct()
     {

@@ -21,5 +21,6 @@ public enum ProductType
 {
    Fruit, //0
    Red, //1
-   Yellow //2
+   Yellow, //2
+   Berry //3
 }
