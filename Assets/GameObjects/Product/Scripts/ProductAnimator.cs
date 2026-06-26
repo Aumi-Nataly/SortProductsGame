@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class ProductAnimator : MonoBehaviour
 {
-    void Start()
+    public void StartAnimation()
     {
-        transform.DOScale(new Vector3(2, 2, 1), 1f);
+        transform.localScale = Vector3.one;
+        transform.DOScale(new Vector3(2, 2, 1), 1.5f);
     }
 }

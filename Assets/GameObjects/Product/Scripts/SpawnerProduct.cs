@@ -10,11 +10,14 @@ public class SpawnerProduct : MonoBehaviour
 
     [SerializeField]
     private GameObject ProductPrefab;
-
+   
+    [SerializeField]
+    private Camera cam;
 
     private Pool pool;
     private ReaderJson<ProductDataList> reader;
     private ProductDataList productDataList;
+    public float padding = 0.5f;
 
     private void Awake()
     {
@@ -34,7 +37,9 @@ public class SpawnerProduct : MonoBehaviour
 
 
         var product = pool.GetFromPool();
-        product.transform.position = transform.position;
+        var animation = product.GetComponent<ProductAnimator>();
+        product.transform.position = new Vector3(cam.transform.position.x,transform.position.y,transform.position.z);
+        animation.StartAnimation();
 
         var prData = GetRandomProduct();
 
@@ -67,5 +72,5 @@ public class SpawnerProduct : MonoBehaviour
         SeeProduct();
     }
 
-    
+
 }

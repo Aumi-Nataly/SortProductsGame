@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 549797126508562130}
   - component: {fileID: 1074706355830269953}
   - component: {fileID: 6818028185942882989}
+  - component: {fileID: 3933461987985253322}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Untagged
@@ -152,6 +153,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6847dc4950bb6842a34386a59ca5137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProductToTrash
+--- !u!114 &3933461987985253322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321144137007904603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c8a31b96d9e734aa6e481f61081fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashBasket
+  cam: {fileID: 0}
+  padding: 0.2
 --- !u!1 &6947938546235332136
 GameObject:
   m_ObjectHideFlags: 0
