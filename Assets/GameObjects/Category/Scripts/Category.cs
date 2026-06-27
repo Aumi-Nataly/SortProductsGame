@@ -1,9 +1,24 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Category : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject managerUIobj;
+
+    [SerializeField]
+    private int AddScore;
+   
+    [SerializeField]
+    private int MinusScore;
+
     private ProductType Tag;
+    private ManagerUI managerUI;
+
+    private void Start()
+    {
+        managerUI = managerUIobj.GetComponent<ManagerUI>();
+    }
+
 
     public void SetTags(ProductType tag)
     {
@@ -16,12 +31,12 @@ public class Category : MonoBehaviour
 
         if (match)
         {
-            Debug.Log("Категория совпала");
+            managerUI.ChangeScore(AddScore);
             product.DeleteProduct();
         }
         else 
         {
-            Debug.Log("Категория НЕ совпала");
+            managerUI.ChangeScore(MinusScore);
             product.DeleteProduct();
         }
     }
