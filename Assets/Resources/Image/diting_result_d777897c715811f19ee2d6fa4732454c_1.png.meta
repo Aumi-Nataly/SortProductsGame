@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 76aa69918a1060e4ea48c14364036b5a
+guid: d7fc6d228ca1d7f4793e466622417e5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7627651752551417209
-    second: berry_0
+      213: 2997709181741623385
+    second: diting_result_d777897c715811f19ee2d6fa4732454c_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: berry_0
+      name: diting_result_d777897c715811f19ee2d6fa4732454c_1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2
-        width: 94
-        height: 96
+        x: 54
+        y: 16
+        width: 1216
+        height: 784
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78a79c2e423252690800000000000000
-      internalID: -7627651752551417209
+      spriteID: 958e2a54e900a9920800000000000000
+      internalID: 2997709181741623385
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      berry_0: -7627651752551417209
+      diting_result_d777897c715811f19ee2d6fa4732454c_1_0: 2997709181741623385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

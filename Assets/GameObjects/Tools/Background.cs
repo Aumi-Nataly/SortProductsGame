@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class Background : MonoBehaviour
+{
+    [SerializeField]
+    private Camera mainCamera;
+    private SpriteRenderer _sr;
+
+    void Awake()
+    {
+        _sr = GetComponent<SpriteRenderer>();
+        FitToCamera();
+    }
+
+    void FitToCamera()
+    {
+        if (mainCamera == null) 
+            mainCamera = Camera.main;
+
+        float camHeight = mainCamera.orthographicSize * 2f;
+        float camWidth = camHeight * mainCamera.aspect;
+
+        float spriteHeight = _sr.sprite.rect.height / _sr.sprite.pixelsPerUnit;
+        float scaleY = camHeight / spriteHeight;
+        float scaleX = scaleY; 
+
+        transform.localScale = new Vector3(scaleX, scaleY, 1f);
+    }
+}
