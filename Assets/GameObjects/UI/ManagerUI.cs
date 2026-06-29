@@ -7,12 +7,18 @@ public class ManagerUI : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text currentText;
+    [SerializeField]
+    private TMP_Text goalText;
     [SerializeField] 
     private float timerDuration = 60f;
     [SerializeField] 
     private TMP_Text timerText;
     [SerializeField]
     private GameObject winPanel;
+    [SerializeField]
+    private GameObject defeatPanel; 
+    [SerializeField]
+    private int goalScore = 100;
 
     public event Action OnTimerFinished;
     
@@ -22,7 +28,7 @@ public class ManagerUI : MonoBehaviour
     void Start()
     {
         remainingTime = timerDuration;
-  
+        goalText.text = "Цель: " + goalScore.ToString();
     }
 
     void Update()
@@ -56,7 +62,28 @@ public class ManagerUI : MonoBehaviour
     {
         Debug.Log("Время вышло!");
 
-        if(SumScore >= 100)
-         winPanel.SetActive(true);
+       if( SumScore >= goalScore)
+            winPanel.SetActive(true);
+        else
+            defeatPanel.SetActive(true);
+        
+    }
+
+    public void OnExitButtonClicked()
+    {
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        // Android: сворачиваем приложение вместо жёсткого выхода
+        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+        currentActivity.Call("moveTaskToBack", true);
+#else
+        // ПК и редактор: обычный выход
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+#endif
     }
 }
