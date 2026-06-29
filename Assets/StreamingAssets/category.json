@@ -4,7 +4,7 @@
       "Id": 1,
       "ImageName": "berry",
       "Tag": 3,
-      "LevelId": [ 1, 2 ]
+      "LevelId": [ 1 ]
     },
     {
       "Id": 2,
@@ -16,13 +16,37 @@
       "Id": 3,
       "ImageName": "red",
       "Tag": 1,
-      "LevelId": [ 1, 2 ]
+      "LevelId": [ 2 ]
     },
     {
       "Id": 4,
       "ImageName": "yellow",
       "Tag": 2,
-      "LevelId": [ 1, 2 ]
+      "LevelId": [ 2 ]
+    },
+    {
+      "Id": 5,
+      "ImageName": "italy",
+      "Tag": 4,
+      "LevelId": [ 3 ]
+    },
+    {
+      "Id": 6,
+      "ImageName": "japan",
+      "Tag": 5,
+      "LevelId": [ 3 ]
+    },
+    {
+      "Id": 7,
+      "ImageName": "xix",
+      "Tag": 6,
+      "LevelId": [ 4 ]
+    },
+    {
+      "Id": 8,
+      "ImageName": "xx",
+      "Tag": 7,
+      "LevelId": [ 4 ]
     }
 
   ]

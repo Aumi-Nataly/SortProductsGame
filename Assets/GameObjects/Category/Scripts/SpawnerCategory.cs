@@ -3,7 +3,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpawnerCategory : MonoBehaviour
+public class SpawnerCategory : MonoBehaviour, IRestartable
 {
     [SerializeField]
     private GameObject firstCategory;
@@ -27,7 +27,7 @@ public class SpawnerCategory : MonoBehaviour
     {
         CameraBoundaries();
         categoryDataList = await reader.ReaderJsonDataAsync();
-        SeeCategories(1);
+        SeeCategories(UserProfile.GetNumberCurrentLevel());
     }
 
     private void SeeCategories(int levelid)
@@ -77,5 +77,9 @@ public class SpawnerCategory : MonoBehaviour
          rightEdge = cam.transform.position.x + camWidth / 2f;
     }
 
-
+    public void RestartLevel()
+    {
+        Debug.Log("RestartLevel SpawnerCategory");
+        SeeCategories(UserProfile.GetNumberCurrentLevel());
+    }
 }

@@ -22,5 +22,9 @@ public enum ProductType
    Fruit, //0
    Red, //1
    Yellow, //2
-   Berry //3
+   Berry, //3
+   Italy, //4
+   Japan, //5
+   XIX, //6
+   XX //7
 }

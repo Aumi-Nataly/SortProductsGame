@@ -1,9 +1,9 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ManagerUI : MonoBehaviour
+public class ManagerUI : MonoBehaviour, IRestartable
 {
     [SerializeField]
     private TMP_Text currentText;
@@ -19,14 +19,21 @@ public class ManagerUI : MonoBehaviour
     private GameObject defeatPanel; 
     [SerializeField]
     private int goalScore = 100;
+    [SerializeField]
+    private List<GameObject> objectForResrart;
+
 
     public event Action OnTimerFinished;
     
     private int SumScore = 0;
-    private float remainingTime;
+    private float remainingTime; 
+    private List<IRestartable> _restartables;
+
+
 
     void Start()
     {
+        RestartModulesList();
         remainingTime = timerDuration;
         goalText.text = "Цель: " + goalScore.ToString();
     }
@@ -51,6 +58,17 @@ public class ManagerUI : MonoBehaviour
         timerText.text = $"{minutes:D2}:{seconds:D2}";
     }
 
+    private void RestartModulesList()
+    {
+        _restartables = new List<IRestartable>();
+        _restartables.Add(this);
+
+        foreach (var obj in objectForResrart)
+        {
+            _restartables.Add(obj.GetComponent<IRestartable>());
+        }
+    }
+
     public void ChangeScore(int score)
     {
         SumScore = SumScore + score < 0 ? 0 : SumScore + score;
@@ -60,10 +78,12 @@ public class ManagerUI : MonoBehaviour
 
     private void ShowNotification()
     {
-        Debug.Log("Время вышло!");
 
-       if( SumScore >= goalScore)
+        if (SumScore >= goalScore)
+        {
+            UserProfile.SaveNextNumberLevel();
             winPanel.SetActive(true);
+        }
         else
             defeatPanel.SetActive(true);
         
@@ -85,5 +105,24 @@ public class ManagerUI : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
 #endif
+    }
+
+    public void OnNextLevelButtonClicked()
+    {
+        foreach (var restartable in _restartables)
+        {
+            restartable.RestartLevel();
+        }
+    }
+
+    public void RestartLevel()
+    {
+        Debug.Log("RestartLevel ManagerUI");
+        winPanel.SetActive(false);
+        defeatPanel.SetActive(false);
+        SumScore = 0;
+        currentText.text = SumScore.ToString();
+        remainingTime = timerDuration;
+        Time.timeScale = 1f;
     }
 }

@@ -1,7 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIMenuManager : MonoBehaviour
 {
+    private void Start()
+    {
+        var a = UserProfile.GetNumberCurrentLevel();
+        Debug.Log($"cur level = {a}");
+    }
     public void OnExitButtonClicked()
     {
        
@@ -18,5 +24,10 @@ public class UIMenuManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
 #endif
+    }
+
+    public void OnStartGameButtonClicked()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }

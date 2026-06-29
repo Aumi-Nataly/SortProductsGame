@@ -18,6 +18,7 @@ public class SpawnerProduct : MonoBehaviour
     private ReaderJson<ProductDataList> reader;
     private ProductDataList productDataList;
     public float padding = 0.5f;
+    private List<ProductData> _tempPool = new List<ProductData>();
 
     private void Awake()
     {
@@ -53,13 +54,18 @@ public class SpawnerProduct : MonoBehaviour
 
     }
 
-    private ProductData GetRandomProduct()
+    private ProductData GetRandomProduct1()
     {
-        int count = productDataList.Products.Count;
-        int randomNumber = UnityEngine.Random.Range(1, count + 1);
+        if (_tempPool.Count == 0)
+        {         
+            _tempPool = new List<ProductData>(productDataList.Products);
+            _tempPool = _tempPool.OrderBy(x => UnityEngine.Random.value).ToList();
+        }
 
-        ProductData pr = productDataList.Products.Where(x => x.Id == randomNumber).FirstOrDefault();
-        return pr;
+        ProductData result = _tempPool[0];
+        _tempPool.RemoveAt(0); 
+
+        return result;
     }
 
 

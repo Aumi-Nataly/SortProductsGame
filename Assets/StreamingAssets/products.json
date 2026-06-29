@@ -3,22 +3,192 @@
     {
       "Id": 1,
       "ImageName": "orange",
-      "Tag": [0, 2]
+      "Tag": [ 0, 2 ]
     },
     {
       "Id": 2,
       "ImageName": "cherry",
-      "Tag": [3, 1]
+      "Tag": [ 3, 1 ]
     },
     {
       "Id": 3,
       "ImageName": "banana",
-      "Tag": [0,2]
+      "Tag": [ 0, 2 ]
     },
     {
       "Id": 4,
       "ImageName": "pear",
-      "Tag": [0,2]
+      "Tag": [ 0, 2 ]
+    },
+    {
+      "Id": 5,
+      "ImageName": "dynamite",
+      "Tag": [ 1, 6 ]
+    },
+    {
+      "Id": 6,
+      "ImageName": "train",
+      "Tag": [ 6 ]
+    },
+    {
+      "Id": 7,
+      "ImageName": "radio",
+      "Tag": [ 6 ]
+    },
+    {
+      "Id": 8,
+      "ImageName": "telephone",
+      "Tag": [ 2, 6 ]
+    },
+    {
+      "Id": 9,
+      "ImageName": "photo",
+      "Tag": [ 2, 6 ]
+    },
+    {
+      "Id": 10,
+      "ImageName": "nuclear",
+      "Tag": [ 7 ]
+    },
+    {
+      "Id": 11,
+      "ImageName": "plastic",
+      "Tag": [ 7 ]
+    },
+    {
+      "Id": 12,
+      "ImageName": "plane",
+      "Tag": [ 7 ]
+    },
+    {
+      "Id": 13,
+      "ImageName": "tv",
+      "Tag": [ 7 ]
+    },
+    {
+      "Id": 14,
+      "ImageName": "barcode",
+      "Tag": [ 7 ]
+    },
+    {
+      "Id": 15,
+      "ImageName": "venice",
+      "Tag": [ 4 ]
+    },
+    {
+      "Id": 16,
+      "ImageName": "carnival",
+      "Tag": [ 4 ]
+    },
+    {
+      "Id": 17,
+      "ImageName": "colosseum",
+      "Tag": [ 2, 4 ]
+    },
+    {
+      "Id": 18,
+      "ImageName": "coffee",
+      "Tag": [ 4 ]
+    },
+    {
+      "Id": 19,
+      "ImageName": "olive",
+      "Tag": [ 4 ]
+    },
+    {
+      "Id": 20,
+      "ImageName": "pizza",
+      "Tag": [ 4 ]
+    },
+    {
+      "Id": 21,
+      "ImageName": "bonsai",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 22,
+      "ImageName": "geisha",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 23,
+      "ImageName": "geta",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 24,
+      "ImageName": "kimono",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 25,
+      "ImageName": "onigiri",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 26,
+      "ImageName": "sakura",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 27,
+      "ImageName": "sushi",
+      "Tag": [ 5 ]
+    },
+    {
+      "Id": 28,
+      "ImageName": "pineapple",
+      "Tag": [ 0, 2 ]
+    },
+    {
+      "Id": 29,
+      "ImageName": "watermelon",
+      "Tag": [ 3 ]
+    },
+    {
+      "Id": 30,
+      "ImageName": "grape",
+      "Tag": [ 3 ]
+    },
+    {
+      "Id": 31,
+      "ImageName": "garnet",
+      "Tag": [ 0, 1 ]
+    },
+    {
+      "Id": 32,
+      "ImageName": "qiwi",
+      "Tag": [ 0 ]
+    },
+    {
+      "Id": 33,
+      "ImageName": "strawberry",
+      "Tag": [ 3, 1 ]
+    },
+    {
+      "Id": 34,
+      "ImageName": "lemon",
+      "Tag": [ 0, 2 ]
+    },
+    {
+      "Id": 35,
+      "ImageName": "raspberry",
+      "Tag": [ 1, 3 ]
+    },
+    {
+      "Id": 36,
+      "ImageName": "peach",
+      "Tag": [ 0 ]
+    },
+    {
+      "Id": 37,
+      "ImageName": "blueberry",
+      "Tag": [ 3 ]
+    },
+    {
+      "Id": 38,
+      "ImageName": "apple",
+      "Tag": [ 0, 1 ]
     }
 
   ]

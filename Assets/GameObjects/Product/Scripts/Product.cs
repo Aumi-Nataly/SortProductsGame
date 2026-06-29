@@ -17,7 +17,6 @@ public class Product : MonoBehaviour
 
     public void DeleteProduct()
     {
-        Debug.Log("DeleteProduct");
         OnProductToPool?.Invoke(gameObject);
     }
 
