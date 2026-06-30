@@ -3,11 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMenuManager : MonoBehaviour
 {
-    private void Start()
-    {
-        var a = UserProfile.GetNumberCurrentLevel();
-        Debug.Log($"cur level = {a}");
-    }
+
     public void OnExitButtonClicked()
     {
 

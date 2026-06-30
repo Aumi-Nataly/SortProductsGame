@@ -17,6 +17,7 @@ public class SpawnerCategory : MonoBehaviour, IRestartable
     private float leftEdge;
     private float rightEdge;
     public float padding = 0.5f;
+    float halfWidth;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class SpawnerCategory : MonoBehaviour, IRestartable
     private async UniTaskVoid Start()
     {
         CameraBoundaries();
+        WidthCategory();
         categoryDataList = await reader.ReaderJsonDataAsync();
         SeeCategories(UserProfile.GetNumberCurrentLevel());
     }
@@ -44,13 +46,17 @@ public class SpawnerCategory : MonoBehaviour, IRestartable
         SetPropertyToCategory(secondCategory, matches[1], false);
     }
 
+    private void WidthCategory()
+    {
+        var catSpr = firstCategory.GetComponent<SpriteRenderer>();
+         halfWidth = catSpr.bounds.extents.x;
+    }
+
     private void SetPropertyToCategory(GameObject catObj, CategotyData match,bool isLeft)
     {
         var catSpr = catObj.GetComponent<SpriteRenderer>();
         var fCatModel = catObj.GetComponent<Category>();
         fCatModel.SetTags(match.Tag);
-
-        float halfWidth = catSpr.bounds.extents.x;
 
         if (isLeft)
         {
@@ -79,7 +85,7 @@ public class SpawnerCategory : MonoBehaviour, IRestartable
 
     public void RestartLevel()
     {
-        Debug.Log("RestartLevel SpawnerCategory");
+        Debug.Log($"RestartLevel SpawnerCategory {UserProfile.GetNumberCurrentLevel()}");
         SeeCategories(UserProfile.GetNumberCurrentLevel());
     }
 }

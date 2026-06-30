@@ -3,6 +3,7 @@ using UnityEngine;
 public static class UserProfile
 {
     private const string KeyCurrentLevel = "current_level";
+    private const int maxLevel = 4;
 
     public static int GetNumberCurrentLevel()
     {
@@ -11,10 +12,17 @@ public static class UserProfile
 
     public static void SaveNextNumberLevel()
     {
-        int cur = PlayerPrefs.GetInt(KeyCurrentLevel, 1);
-        cur = cur == 4 ? 0 : cur; //для запуска уровней по кругу
+        int cur = PlayerPrefs.GetInt(KeyCurrentLevel, 1); 
 
-        PlayerPrefs.SetInt(KeyCurrentLevel, cur + 1);
+        // Вычисляем следующий уровень по кругу
+        int next = cur < maxLevel ? cur + 1 : 1;
+
+        PlayerPrefs.SetInt(KeyCurrentLevel, next);
+        PlayerPrefs.Save();
+    }
+    public static void TestNumberLevel()
+    {
+        PlayerPrefs.SetInt(KeyCurrentLevel, 1);
         PlayerPrefs.Save();
     }
 }

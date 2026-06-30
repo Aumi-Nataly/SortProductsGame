@@ -22,8 +22,6 @@ public class UIBackground : MonoBehaviour
 
         var emptySquare = Screen.height - Screen.safeArea.height;
         _rect.sizeDelta = new Vector2(_rect.sizeDelta.x, emptySquare);
-
-        Debug.Log($"emptySquare = {Screen.safeArea.height}");
      }
 
 }

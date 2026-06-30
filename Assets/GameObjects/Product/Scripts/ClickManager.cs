@@ -48,7 +48,6 @@ public class ClickManager : MonoBehaviour
 
         if (hit != null)
         {
-            Debug.Log("Клик по: " + hit.name);
             draggedObject = hit.gameObject;
             draggedRb = hit.GetComponent<Rigidbody2D>();
         }

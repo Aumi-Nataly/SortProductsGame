@@ -28,7 +28,7 @@ public class ManagerUI : MonoBehaviour, IRestartable
     private int SumScore = 0;
     private float remainingTime; 
     private List<IRestartable> _restartables;
-
+    private bool isTimerFinished = false;
 
 
     void Start()
@@ -40,15 +40,18 @@ public class ManagerUI : MonoBehaviour, IRestartable
 
     void Update()
     {
+        if (isTimerFinished)
+            return;
+
         remainingTime -= Time.deltaTime;
 
         if (remainingTime <= 0f)
         {
+            isTimerFinished = true;
             remainingTime = 0f;
-
-            Time.timeScale = 0f;           // ставим паузу
+            Time.timeScale = 0f;          
             ShowNotification();   
-            OnTimerFinished?.Invoke();    // оповещение
+            OnTimerFinished?.Invoke();    
             return;
         }
 
@@ -83,6 +86,7 @@ public class ManagerUI : MonoBehaviour, IRestartable
         {
             UserProfile.SaveNextNumberLevel();
             winPanel.SetActive(true);
+            Debug.Log($"winPanel.SetActive level {UserProfile.GetNumberCurrentLevel()}");
         }
         else
             defeatPanel.SetActive(true);
@@ -119,7 +123,7 @@ public class ManagerUI : MonoBehaviour, IRestartable
 
     public void RestartLevel()
     {
-        Debug.Log("RestartLevel ManagerUI");
+        isTimerFinished = false;
         winPanel.SetActive(false);
         defeatPanel.SetActive(false);
         SumScore = 0;

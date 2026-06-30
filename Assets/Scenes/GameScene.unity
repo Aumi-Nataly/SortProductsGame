@@ -2867,7 +2867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ManagerUI
   currentText: {fileID: 1192984387}
   goalText: {fileID: 1956886946}
-  timerDuration: 80
+  timerDuration: 40
   timerText: {fileID: 953701172}
   winPanel: {fileID: 1644450058}
   defeatPanel: {fileID: 1597232056}
