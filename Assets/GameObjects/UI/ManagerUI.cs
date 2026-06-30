@@ -93,16 +93,18 @@ public class ManagerUI : MonoBehaviour, IRestartable
     {
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-        // Android: сворачиваем приложение вместо жёсткого выхода
-        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        currentActivity.Call("moveTaskToBack", true);
+        using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+            activity.Call<bool>("moveTaskToBack", true);
+        }
 #else
-        // ПК и редактор: обычный выход
-        Application.Quit();
+        Debug.Log("Выход работает только на Android устройстве");
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
 #endif
 #endif
     }

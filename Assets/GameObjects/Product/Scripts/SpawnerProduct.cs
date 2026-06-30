@@ -54,7 +54,7 @@ public class SpawnerProduct : MonoBehaviour
 
     }
 
-    private ProductData GetRandomProduct1()
+    private ProductData GetRandomProduct()
     {
         if (_tempPool.Count == 0)
         {         
