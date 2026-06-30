@@ -31,11 +31,13 @@ public class Category : MonoBehaviour
 
         if (match)
         {
+            SoundManager.Instance.PlayGoodSource();
             managerUI.ChangeScore(AddScore);
             product.DeleteProduct();
         }
         else 
         {
+            SoundManager.Instance.PlayBadSource();
             managerUI.ChangeScore(MinusScore);
             product.DeleteProduct();
         }

@@ -6,7 +6,6 @@ public class UIMenuManager : MonoBehaviour
 
     public void OnExitButtonClicked()
     {
-
 #if UNITY_ANDROID && !UNITY_EDITOR
         using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
         {
@@ -26,6 +25,7 @@ public class UIMenuManager : MonoBehaviour
 
     public void OnStartGameButtonClicked()
     {
+        SoundManager.Instance.PlayButtonSource();
         SceneManager.LoadScene("GameScene");
     }
 }

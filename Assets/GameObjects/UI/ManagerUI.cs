@@ -84,18 +84,21 @@ public class ManagerUI : MonoBehaviour, IRestartable
 
         if (SumScore >= goalScore)
         {
+            SoundManager.Instance.PlayWinSource();
             UserProfile.SaveNextNumberLevel();
             winPanel.SetActive(true);
             Debug.Log($"winPanel.SetActive level {UserProfile.GetNumberCurrentLevel()}");
         }
         else
+        {
+            SoundManager.Instance.PlayDefeatSource();
             defeatPanel.SetActive(true);
+        }
         
     }
 
     public void OnExitButtonClicked()
     {
-
 #if UNITY_ANDROID && !UNITY_EDITOR
         using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
         {
@@ -115,6 +118,8 @@ public class ManagerUI : MonoBehaviour, IRestartable
 
     public void OnNextLevelButtonClicked()
     {
+        SoundManager.Instance.PlayButtonSource();
+
         foreach (var restartable in _restartables)
         {
             restartable.RestartLevel();

@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c0ec267fd4fa74c911e39607384058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Background
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 519420031}
 --- !u!212 &207371798
 SpriteRenderer:
   serializedVersion: 2
@@ -1278,7 +1278,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 263.211, y: 95.676}
+  m_SizeDelta: {x: 263.211, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953701172
 MonoBehaviour:
@@ -1334,8 +1334,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -1540,7 +1540,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 254.33, y: 63.341}
+  m_SizeDelta: {x: 254.33, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192984387
 MonoBehaviour:
@@ -1589,12 +1589,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
+  m_fontSize: 56
   m_fontSizeBase: 90
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 56
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1948,10 +1948,10 @@ RectTransform:
   - {fileID: 1442618263}
   m_Father: {fileID: 1446580350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -1707.659}
+  m_SizeDelta: {x: 0, y: 249.997}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1426384828
 MonoBehaviour:
@@ -1970,14 +1970,14 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!114 &1426384829
 MonoBehaviour:
@@ -2065,7 +2065,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 333.375, y: 196.941}
+  m_SizeDelta: {x: 333.375, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442618264
 MonoBehaviour:
@@ -2085,13 +2085,13 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 10
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1 &1446580346
 GameObject:
@@ -2867,11 +2867,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ManagerUI
   currentText: {fileID: 1192984387}
   goalText: {fileID: 1956886946}
-  timerDuration: 40
+  timerDuration: 45
   timerText: {fileID: 953701172}
   winPanel: {fileID: 1644450058}
   defeatPanel: {fileID: 1597232056}
-  goalScore: 50
+  goalScore: 100
   objectForResrart:
   - {fileID: 2113633527}
 --- !u!1 &1956886944
@@ -2909,7 +2909,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 306.992, y: 83.687}
+  m_SizeDelta: {x: 306.992, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956886946
 MonoBehaviour:

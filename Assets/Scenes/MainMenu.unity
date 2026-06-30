@@ -119,6 +119,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &157744791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1599838171001866097, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: badSourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7d5139a2d2df3f40b2fd91b5c4a0217, type: 3}
+    - target: {fileID: 1599838171001866097, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: winSourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2999a8c2c936b614989c3aa5265eac71, type: 3}
+    - target: {fileID: 1599838171001866097, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: goodSourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a71d8e8ea428e0409d3df636b9f0192, type: 3}
+    - target: {fileID: 1599838171001866097, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: buttonSourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1be2fcc16ab0da84f99ba7c633037620, type: 3}
+    - target: {fileID: 1599838171001866097, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: defeatSourceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76adc3bada8ddff4bbd042635fed2f7d, type: 3}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 358.70596
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 365.16348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278738603785256336, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122004022392232433, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5badf38bdbffb2944bad3426c1690ffe, type: 3}
 --- !u!1 &191979293
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7191073555793734665, guid: d79fac3eb8e3ddd4c8c89e91c2cb5a96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d79fac3eb8e3ddd4c8c89e91c2cb5a96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1227,3 +1304,4 @@ SceneRoots:
   - {fileID: 1687885788}
   - {fileID: 276223107}
   - {fileID: 928827972}
+  - {fileID: 157744791}
