@@ -8,7 +8,9 @@
 
 🛠️**Основные механики:**
 * Управление реализовано через Unity **Input System**.
-* 
+* Информация о текущем уровне хранится в **PlayerPrefs**.
+* Информация о категориях уровня и товары хранится в json-файлах. Асинхронное чтение данных с через инструменты **UniTask**.
+* Простая анимация появления товаров реализована через **DOTween**.
 
 <a target="\_blank" href="https://icons8.com/icon/19527/cherry">Вишня</a> icon by <a target="\_blank" href="https://icons8.com">Icons8</a>
 <a target="_blank" href="https://icons8.com/icon/pu2MfAM7qtF0/trash">Мусор</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
